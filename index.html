@@ -1,14 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="icon" type="image/svg+xml" href="/Crystal-logo.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite App</title>
-
-
-  <link rel="stylesheet" href="/src/style.css">
+  <title>Crystal Video Portfolio</title>
+  <link rel="stylesheet" href="./src/style.css">
 </head>
 
 <body>
@@ -17,27 +15,53 @@
     <div class="h-screen bg-black bg-opacity-60 flex flex-col items-center justify-center">
       <!-- Navbar -->
       <nav id="header"
-        class="container fixed top-0 min-h-min flex justify-between items-center z-20 text-white backdrop-blur-xl">
+        class="fixed top-0 min-h-min w-full z-20 text-white backdrop-blur-xl border-b border-cyan-200 border-opacity-20 shadow-white">
         <!-- <h1 class=" text-2xl sm:text-3xl font-bold">Crystal Video</h1> -->
-        <img class="w-[86px] h-[86px] my-2" src="/Crystal-logo.png">
+        <div class="container w-full flex justify-between items-center">
+          <img class="w-[86px] h-[86px] my-2" src="/Crystal-logo.png">
 
-        <ul class="hidden  gap-9 md:flex">
-          <li><a href="#homesection" class="text-lg">Home</a></li>
-          <li><a href="#outwork" class="text-lg">Work</a></li>
-          <li><a href="#ourservice" class="text-lg">Services</a></li>
-          <li><a href="#aboutsection" class="text-lg">About</a></li>
-          <li><a href="#contactussection" class="text-lg">Contact</a></li>
-        </ul>
+          <ul class="hidden gap-9 md:flex">
+            <li><a href="#homesection" class="text-lg">Home</a></li>
+            <li><a href="#ourwork" class="text-lg">Projects</a></li>
+            <li><a href="#ourservice" class="text-lg">Services</a></li>
+            <li><a href="#aboutsection" class="text-lg">About</a></li>
+            <li><a href="#contactussection" class="text-lg">Contact</a></li>
+          </ul>
 
-        <div class="w-12 h-12 md:hidden">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-            <g id="SVGRepo_iconCarrier">
-              <path d="M4 12H20M4 8H20M4 16H12" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round"></path>
-            </g>
-          </svg>
+          <div class="w-12 h-12 md:hidden" id="menu">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path d="M4 12H20M4 8H20M4 16H12" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </g>
+            </svg>
+          </div>
+
+          <div class="bg-[#0a0c14] backdrop-blur-lg hidden fixed inset-0 h-screen w-11/12 z-40 px-8" id="mobliemenu">
+            <div class="flex justify-between items-center" id="closemenu">
+              <img class="w-[86px] h-[86px] my-2" src="/Crystal-logo.png">
+              <svg fill="#00C3DD" height="24px" width="24px" version="1.1" id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 490 490"
+                xml:space="preserve">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <polygon
+                    points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 489.292,457.678 277.331,245.004 489.292,32.337 ">
+                  </polygon>
+                </g>
+              </svg>
+            </div>
+            <ul class="gap-9 mt-16 h-full flex flex-col text-white hover:text-gradient font-bold  items-center">
+              <li><a href="#homesection" class="text-2xl mobile_section_name">Home</a></li>
+              <li><a href="#ourwork" class="text-2xl mobile_section_name">Projects</a></li>
+              <li><a href="#ourservice" class="text-2xl mobile_section_name">Services</a></li>
+              <li><a href="#aboutsection" class="text-2xl mobile_section_name">About</a></li>
+              <li><a href="#contactussection" class="text-2xl mobile_section_name">Contact</a></li>
+            </ul>
+          </div>
         </div>
       </nav>
       <!-- Navbar -->
@@ -52,8 +76,9 @@
             </h1>
             <p class="text-white text-base sm:text-lg mb-12">Capturing, editing, and animating with precision to bring
               your </br>vision to life seamlessly.</p>
-            <button class="px-9 py-4 gradient font-bold text-lg rounded-sm text-white">Our
-              Work</button>
+            <a href="#ourwork">
+              <button class="px-9 py-4 gradient font-bold text-lg rounded-sm text-white">Our Work</button>
+            </a>
           </div>
         </div>
       </div>
@@ -62,16 +87,43 @@
   </section>
 
   <!-- Our Work -->
-  <section id="outwork" class="">
-    <h2 class="font-bold text-center text-gradient">Our Projects</h2>
+  <section id="ourwork" class="">
+    <h2 class="font-bold text-center text-gradient">Our
+      Projects</h2>
     <div>
       <ul class="container flex flex-wrap gap-2 lg:gap-4 justify-center my-8">
-        <li class="gradient border-cyan-500 border px-4 py-1 rounded-3xl text-white userClick">Motion Graphic</li>
-        <li class="border-cyan-500 border px-4 py-1 rounded-3xl text-white userClick">3D</li>
-        <li class="border-cyan-500 border px-4 py-1 rounded-3xl text-white userClick">Video Editing</li>
-        <li class="border-cyan-500 border px-4 py-1 rounded-3xl text-white userClick">Color Grading</li>
-        <li class="border-cyan-500 border px-4 py-1 rounded-3xl text-white userClick">Camera</li>
-        <li class="border-cyan-500 border px-4 py-1 rounded-3xl text-white userClick">Live Events</li>
+        <li class="gradient border-cyan-500 border px-4 py-1 rounded-3xl text-white userClick cursor-pointer text-base">
+          Motion Graphic</li>
+        <a href="#projectcard_container">
+          <li class="border-cyan-500 border px-4 py-1 rounded-3xl text-white userClick cursor-pointer text-base">
+            Post
+            Production-Online</li>
+        </a>
+        <li class="border-cyan-500 border px-4 py-1 rounded-3xl text-white userClick cursor-pointer text-base">
+          Corporate
+          Video-Shoot AVS</li>
+        <li class="border-cyan-500 border px-4 py-1 rounded-3xl text-white userClick cursor-pointer text-base">
+          Stock footage AV
+        </li>
+        <li class="border-cyan-500 border px-4 py-1 rounded-3xl text-white userClick cursor-pointer text-base">
+          Dubbing</li>
+        <li class="border-cyan-500 border px-4 py-1 rounded-3xl text-white userClick cursor-pointer text-base">
+          Digital Films Shoot
+        </li>
+        <li class="border-cyan-500 border px-4 py-1 rounded-3xl text-white userClick cursor-pointer text-base">
+          Live event</li>
+        <li class="border-cyan-500 border px-4 py-1 rounded-3xl text-white userClick cursor-pointer text-base">
+          Roto</li>
+        <li class="border-cyan-500 border px-4 py-1 rounded-3xl text-white userClick cursor-pointer text-base">
+          TVCs Making</li>
+        <li class="border-cyan-500 border px-4 py-1 rounded-3xl text-white userClick cursor-pointer text-base">
+          Interviews</li>
+        <li class="border-cyan-500 border px-4 py-1 rounded-3xl text-white userClick cursor-pointer text-base">
+          3D Animation</li>
+        <li class="border-cyan-500 border px-4 py-1 rounded-3xl text-white userClick cursor-pointer text-base">
+          Animatics</li>
+        <li class="border-cyan-500 border px-4 py-1 rounded-3xl text-white userClick cursor-pointer text-base">
+          Color Grading</li>
       </ul>
     </div>
 
@@ -83,7 +135,7 @@
   <!-- Our Work -->
 
   <!-- Our Services -->
-  <section id="ourservice" class="">
+  <section id="ourservice" class="bg-[#0D1117]">
     <h2 class="font-bold text-center text-gradient">Our Services</h2>
 
     <div id="servicecard_container" class="container grid md:grid-cols-2 lg:grid-cols-3  gap-2 lg:gap-4">
@@ -95,11 +147,18 @@
   <!-- Our Services -->
 
   <!-- About Section -->
-  <section id="aboutsection" class="bg-[#0D1117]">
+  <section id="aboutsection" class="">
     <h2 class="font-bold text-center text-gradient">About US</h2>
     <div class="w-full mx-auto container">
 
       <div class="w-full justify-start items-center xl:gap-12 gap-10 grid lg:grid-cols-2 grid-cols-1">
+        <div class="h-full w-full">
+          <div class="h-full w-full bg-cover bg-center max-lg:hidden"
+            style="background-image: url('/CrystalVideo_image_deskop.webp');">
+          </div>
+          <img class="h-full w-full lg:hidden" src="/CrystalVideo_image_deskop.webp" alt="about Us image" />
+        </div>
+
         <div class="w-full flex-col justify-center lg:items-start items-center gap-10 inline-flex">
           <div class="w-full flex-col justify-center items-start gap-8 flex">
             <div class="flex-col justify-start lg:items-start items-center gap-4 flex">
@@ -118,62 +177,60 @@
               <div class="w-full justify-start items-center gap-8 grid md:grid-cols-2 grid-cols-1">
                 <div class="smallInfoCard">
                   <h4 class="text-gradient font-bold">15+ Years</h4>
-                  <p class="text-gray-500 font-normal">Influencing Digital
+                  <p class="text-[#dee8fe] font-normal">Influencing Digital
                     Landscapes Together</p>
                 </div>
                 <div class="smallInfoCard">
                   <h4 class="text-gradient text-2xl font-bold ">125+ Projects
                   </h4>
-                  <p class="text-gray-500 font-normal ">Excellence Achieved
+                  <p class="text-[#dee8fe] font-normal ">Excellence Achieved
                     Through Success</p>
                 </div>
               </div>
               <div class="w-full h-full justify-start items-center gap-8 grid md:grid-cols-2 grid-cols-1">
                 <div class="smallInfoCard">
                   <h4 class="text-gradient font-bold">Our Mission</h4>
-                  <p class="text-gray-500 font-normal">To transform ideas into impactful visual experiences.</p>
+                  <p class="text-[#dee8fe] font-normal">To transform ideas into impactful visual experiences.</p>
                 </div>
                 <div class="smallInfoCard">
                   <h4 class="text-gradient text-2xl font-bold">Our Vision</h4>
-                  <p class="text-gray-500 font-normal">To be a leading name in video production and post-production
+                  <p class="text-[#dee8fe] font-normal">To be a leading name in video production and post-production
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          <button
-            class="sm:w-fit w-full group px-3.5 py-2 bg-indigo-50 hover:bg-indigo-100 rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] transition-all duration-700 ease-in-out justify-center items-center flex">
-            <span
-              class="px-1.5 text-blue-600 text-sm font-medium leading-6 group-hover:-translate-x-0.5 transition-all duration-700 ease-in-out">Contact
-              for Enquiry</span>
-            <svg class="group-hover:translate-x-0.5 transition-all duration-700 ease-in-out"
-              xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-              <path d="M6.75265 4.49658L11.2528 8.99677L6.75 13.4996" stroke="#4F46E5" stroke-width="1.6"
-                stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </button>
+          <a href="#contactussection">
+            <button
+              class="sm:w-fit w-full group px-3.5 py-2 bg-indigo-50 hover:bg-indigo-100 rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] transition-all duration-700 ease-in-out justify-center items-center flex">
+              <span
+                class="px-1.5 text-blue-600 text-sm font-medium leading-6 group-hover:-translate-x-0.5 transition-all duration-700 ease-in-out">Contact
+                for Enquiry</span>
+              <svg class="group-hover:translate-x-0.5 transition-all duration-700 ease-in-out"
+                xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <path d="M6.75265 4.49658L11.2528 8.99677L6.75 13.4996" stroke="#4F46E5" stroke-width="1.6"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </a>
         </div>
 
-        <div class="">
-          <div class="">
-            <img class="w-full" src="https://pagedone.io/asset/uploads/1717742431.png" alt="about Us image" />
-          </div>
-        </div>
+
       </div>
     </div>
   </section>
   <!-- About Section -->
 
   <!-- Contact us form -->
-  <section id="contactussection">
+  <section id="contactussection" class="bg-[#0D1117]">
     <h2 class="font-bold text-center text-gradient">Contact US</h2>
     <div class="grid md:grid-cols-3 container  py-8 gap-8 ">
 
       <div class="col-span-3 md:col-span-1">
-        <h2 class="font-bold dark:text-gray-100">Get in Touch</h2>
-        <p class=" dark:text-gray-400">Have something to say? We are here to help. Fill up the
+        <h2 class="font-bold text-gray-100">Get in Touch</h2>
+        <p class=" text-gray-200">Have something to say? We are here to help. Fill up the
           form or send email or call phone.</p>
-        <div class="flex items-center mt-12 space-x-4 text-dark-600 dark:text-gray-400">
+        <div class="flex items-start mt-12 space-x-4 text-gray-200">
           <div class="w-8 h-8 p-2 rounded-full gradient">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFFFFF"
               aria-hidden="true" class="w-4 h-4">
@@ -181,9 +238,11 @@
                 d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z">
               </path>
             </svg>
-          </div><span>Parel, Mumbai</span>
+          </div><span class="text-pretty">501 Krishna Castle, 5th floor, Dighe Nagar, Jupiter Mill Compound, Fitwala
+            Road, Opp. Sai Baba
+            Mandir, Parel West, Mumbai 400 013</span>
         </div>
-        <div class="flex items-center mt-4 space-x-4 text-dark-600 dark:text-gray-400">
+        <div class="flex items-center mt-4 space-x-4 text-gray-200">
           <div class="w-8 h-8 p-2 rounded-full gradient">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFFFFF"
               aria-hidden="true" class="w-4 h-4">
@@ -193,9 +252,9 @@
             </svg>
           </div>
 
-          <a href="mailto:crystalvideo@gmail.com">crystalvideo@gmail.com</a>
+          <a href="mailto:video.crystal2@gmail.com" class="text-lg">video.crystal2@gmail.com</a>
         </div>
-        <div class="flex items-center mt-4 space-x-4 text-dark-600 dark:text-gray-400 ">
+        <div class="flex items-center mt-4 space-x-4 text-gray-200 ">
           <div class="w-8 h-8 p-2 rounded-full gradient">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFFFFF"
               aria-hidden="true" class="w-4 h-4">
@@ -204,7 +263,7 @@
               </path>
             </svg>
           </div>
-          <a href="">+91 9820609423</a>
+          <div class="text-lg">+91 9820609423</div>
         </div>
       </div>
 
@@ -246,48 +305,37 @@
   <!-- Contact us form -->
 
   <!-- Footer -->
-  <footer class="shadow dark:bg-gray-900 ">
-    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+  <footer class="shadow bg-gray-900 ">
+    <div class="w-full max-w-screen-xl mx-auto  container">
       <div class="sm:flex sm:items-center sm:justify-between">
-        <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-          <img src="/Crystal-logo.png" class="h-24" alt="Flowbite Logo" />
-          <span class="self-center text-2xl font-bold whitespace-nowrap dark:text-white">CrystalVideo</span>
-        </a>
-        <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
-          <li>
-            <a href="#" class="hover:underline me-4 md:me-6">About</a>
-          </li>
-          <li>
-            <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
-          </li>
-          <li>
-            <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
-          </li>
-          <li>
-            <a href="#" class="hover:underline">Contact</a>
-          </li>
+        <div class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+          <img src="/Crystal-logo.png" class="h-24" alt="Crystal-logo" />
+          <!-- <span class="self-center text-2xl font-bold whitespace-nowrap dark:text-white">CrystalVideo</span> -->
+        </div>
+        <ul class="flex flex-wrap items-center mb-6 text-base font-medium  sm:mb-0 text-gray-400">
+          <li><a href="#homesection" class="hover:underline me-4 md:me-6">Home</a></li>
+          <li><a href="#ourwork" class="hover:underline me-4 md:me-6">Projects</a></li>
+          <li><a href="#ourservice" class="hover:underline me-4 md:me-6">Services</a></li>
+          <li><a href="#aboutsection" class="hover:underline me-4 md:me-6">About</a></li>
+          <li><a href="#contactussection" class="hover:underline">Contact</a></li>
         </ul>
       </div>
-      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-      <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 <a class="hover:underline">
+      <hr class="my-6 border-gray-500 sm:mx-auto lg:my-8" />
+      <span class="block text-sm sm:text-center text-gray-400">© 2025 <a class="hover:underline">
           CrystalVideo™</a>. All Rights Reserved.</span>
     </div>
   </footer>
   <!-- Footer -->
 
 
-
-
-
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="/src/animation.js"></script>
-  <script src="/src/projectcategory.js"></script>
-  <script src="/src/services_data.js"></script>
-
-
+  <script type="module" src="./src/projectcategory.js"></script>
+  <script type="module" src="./src/main.js"></script>
+  <script type="module" src="./src/services_data.js"></script>
+  <script type="module" src="./src/animation.js"></script>
 
 </body>
+
 
 </html>

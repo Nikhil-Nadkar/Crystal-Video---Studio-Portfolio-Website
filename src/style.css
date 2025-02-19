@@ -43,6 +43,10 @@ p {
 
 
 
+nav a:hover {
+  @apply text-cyan-400
+}
+
 .gradient {
   @apply bg-gradient-to-r from-[#00C3DD] to-[#0088dd] transition-all duration-500 ease-out ;
 }
@@ -64,4 +68,68 @@ p {
 }
 .smallInfoCard {
   @apply w-full h-full p-3.5 rounded-xl border border-[#D0DFFF] hover:border-gray-400 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-1 inline-flex
+}
+
+@keyframes appear {
+  from{
+    opacity: 0;
+    scale:0.5;
+    transform:translatex(200px);
+    /* transform:translatey(200px) */
+  }
+  to {
+    opacity: 1;
+    scale:1;
+    transform:translatex(0px);
+    /* transform:translatey(0px) */
+  }
+}
+
+@keyframes appear_v02 {
+  from{
+    opacity: 0;
+    scale:0.5;
+    /* transform:translatex(200px); */
+    transform:translatey(200px)
+  }
+  to {
+    opacity: 1;
+    scale:1;
+    /* transform:translatex(0px); */
+    transform:translatey(0px)
+  }
+}
+
+#product {
+  animation: appear 1s ease-in-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+#youtubeVideo {
+  animation: appear_v02 1s ease-in-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+
+
+/* custom scroller */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #111D3C;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0088dd;
+  border-radius: 25px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #00C3DD;
 }

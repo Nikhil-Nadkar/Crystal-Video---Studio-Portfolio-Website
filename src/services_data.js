@@ -1,10 +1,21 @@
+import MotionGraphicIMG from "./assets/Crystal Video MotionGraphic.webp";
+import threeDanimationIMG from "./assets/Crystal Video 3danimation.webp";
+import VideoEditingIMG from "./assets/Crystal Video Video Editing.webp";
+import J2KformatIMG from "./assets/Crystal Video Cinema J2K format.webp";
+import ColorGradingIMG from "./assets/Crystal Video Color Grading.webp";
+import LiveeventIMG from "./assets/Crystal Video Live event.webp";
+import EquipmentRentalsIMG from "./assets/Crystal Video  Equipment Rentals.webp";
+import SoundIMG from "./assets/Crystal Video Sound.webp";
+import UploadingTVCsIMG from "./assets/Crystal Video Uploading TVCs & film.webp";
+import CorporateShootsIMG from "./assets/Crystal Video  Corporate Shoots.webp";
+
 const serviceData = [
   {
     id: "01",
     title: "Motion Graphics",
     description:
       "Bring stories to life with captivating motion graphics, 2D animations, and rotoscoping.",
-    image: "./src/assets/MotionGraphic.jpg",
+    image: `${MotionGraphicIMG}`,
     icon: "/creator-studio-svgrepo-com.svg",
   },
 
@@ -13,7 +24,7 @@ const serviceData = [
     title: "3D Animation",
     description:
       "Bring stories to life with stunning 3D animations, visual effects, and immersive virtual experiences.",
-    image: "./src/assets/3danimation.png",
+    image: `${threeDanimationIMG}`,
     icon: "/creator-studio-svgrepo-com.svg",
   },
 
@@ -22,16 +33,16 @@ const serviceData = [
     title: "Video Editing",
     description:
       "Seamless editing workflows for any project scale with expert color correction and grading.",
-    image: "/Camera.jpg",
+    image: `${VideoEditingIMG}`,
     icon: "/creator-studio-svgrepo-com.svg",
   },
 
   {
     id: "04",
-    title: "Cinema format",
+    title: "Cinema J2K format",
     description:
       "J2K file conversion and assistance with censor certification for seamless theater screenings.",
-    image: "/j2k_img.jpg",
+    image: `${J2KformatIMG}`,
     icon: "/creator-studio-svgrepo-com.svg",
   },
 
@@ -40,7 +51,7 @@ const serviceData = [
     title: "Color Grading",
     description:
       "Enhance the visual appeal of your videos with professional color correction and grading to achieve cinematic quality.",
-    image: "/j2k_img.jpg",
+    image: `${ColorGradingIMG}`,
     icon: "/creator-studio-svgrepo-com.svg",
   },
 
@@ -49,7 +60,7 @@ const serviceData = [
     title: "Live event",
     description:
       "Multicamera shoots with video Switcher & lives on YouTube, Team & Zoom.",
-    image: "/event_img.jpg",
+    image: `${LiveeventIMG}`,
     icon: "/creator-studio-svgrepo-com.svg",
   },
 
@@ -58,7 +69,7 @@ const serviceData = [
     title: "Equipment Rentals",
     description:
       "High-quality cameras, LED lighting, projectors, and sound equipment to elevate your production.",
-    image: "/Camera.jpg",
+    image: `${EquipmentRentalsIMG}`,
     icon: "/creator-studio-svgrepo-com.svg",
   },
 
@@ -67,7 +78,7 @@ const serviceData = [
     title: "Sound",
     description:
       "Professional audio solutions, including mixers, JBL speakers, wireless mics, DJ, and karaoke systems.",
-    image: "/sound_img.jpg",
+    image: `${SoundIMG}`,
     icon: "/creator-studio-svgrepo-com.svg",
   },
 
@@ -76,7 +87,7 @@ const serviceData = [
     title: "Uploading TVCs & film",
     description:
       "Uploading TVCs and films via eBus and Dropbox for hassle-free distribution.",
-    image: "/services_video_editng.jpg",
+    image: `${UploadingTVCsIMG}`,
     icon: "/creator-studio-svgrepo-com.svg",
   },
 
@@ -85,7 +96,7 @@ const serviceData = [
     title: "Corporate Shoots",
     description:
       "Specialized services for corporate films, interviews, and product showcase videos.",
-    image: "/services_video_editng.jpg",
+    image: `${CorporateShootsIMG}`,
     icon: "/creator-studio-svgrepo-com.svg",
   },
 ];
@@ -93,17 +104,14 @@ const serviceData = [
 document.addEventListener("DOMContentLoaded", () => {
   const productsContainer = document.getElementById("servicecard_container");
 
-  // Iterate through each product and create HTML elements
+  let offset = 500;
   serviceData.forEach((product) => {
-    // Create a container for each product
     const productDiv = document.createElement("div");
-    // productDiv.classList.add("servicecard");
-    productDiv.className = "product";
+    productDiv.id = "product";
 
-    // Add product content
     productDiv.innerHTML = `
-        <div id='card' class="aspect-square rounded-2xl relative ourservice" style="background-image: url('${product.image}'); background-size: cover; background-position: center;">
-          <div class="h-full bg-gradient-to-t from-black to-transparent ease-in-out duration-500 rounded-2xl">
+        <div class="aspect-square rounded-2xl relative ourservice" loading="lazy" style="background-image: url('${product.image}'); background-size: cover; background-position: center;">
+          <div class="h-full bg-gradient-to-t from-black to-transparent ease-in-out duration-500 rounded-2xl" >
             <div class="p-5 md:p-6 xl:p-7 absolute text-white flex flex-col justify-between h-full hover:text-cyan-500 ease-in-out duration-500">
              <div class="w-10 h-10 md:w-11 md:h-11 xl:w-12 xl:h-12 p-2 rounded-full gradient">
                 <img src='${product.icon}'></img>
@@ -116,8 +124,6 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         </div>
       `;
-
-    // Append to the container
     productsContainer.appendChild(productDiv);
   });
 });
