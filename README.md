@@ -3,6 +3,9 @@
 ## 🎬 Overview
 This is a modern, single-page portfolio website for Crystal Video Studio built with JavaScript, Tailwind CSS, HTML, and enhanced with GSAP animations. The site showcases the studio's video production work in a sleek, dark-themed interface with smooth animations and visual effects.
 
+## 🌐 Demo
+Check out the live site: [Crystal Video Studio](https://crystal-video.netlify.app/)
+
 ## 🛠️ Tech Stack
 - **HTML5**: Structure and content
 - **JavaScript**: Interactivity and dynamic content
@@ -24,18 +27,15 @@ This is a modern, single-page portfolio website for Crystal Video Studio built w
 4. **📞 Contact**: Form and information for potential clients
 
 ## 💻 Installation
-
 1. Clone the repository:
 ```bash
 git clone https://github.com/yourusername/crystal-video-portfolio.git
 cd crystal-video-portfolio
 ```
-
 2. Install dependencies:
 ```bash
 npm install
 ```
-
 3. Start the development server:
 ```bash
 npm run dev
