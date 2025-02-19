@@ -43,23 +43,36 @@ npm run dev
 
 ## 📁 Project Structure
 ```
-├── public
-│   └── assets
-│       ├── images
-│       └── videos
-├── src
-│   ├── components
-│   │   ├── Hero.js
-│   │   ├── Projects.js
-│   │   ├── Services.js
-│   │   └── Contact.js
-│   ├── styles
-│   │   └── main.css
-│   ├── utils
-│   │   └── animations.js
-│   ├── main.js
-│   └── index.html
-├── vite.config.js
-├── tailwind.config.js
-└── package.json
+CrystalVideo_website/
+├─ .gitignore
+├─ data.json
+├─ index.html
+├─ package-lock.json
+├─ package.json
+├─ postcss.config.js
+├─ public/
+│  ├─ creator-studio-svgrepo-com.svg
+│  ├─ Crystal-logo.png
+│  ├─ CrystalVideo_image_deskop.webp
+│  ├─ hero_section_img.webp
+│  └─ vite.svg
+├─ README.md
+├─ src/
+│  ├─ animation.js
+│  ├─ assets/
+│  │  ├─ Crystal Video  Corporate Shoots.webp
+│  │  ├─ Crystal Video  Equipment Rentals.webp
+│  │  ├─ Crystal Video 3danimation.webp
+│  │  ├─ Crystal Video Cinema J2K format.webp
+│  │  ├─ Crystal Video Color Grading.webp
+│  │  ├─ Crystal Video Live event.webp
+│  │  ├─ Crystal Video MotionGraphic.webp
+│  │  ├─ Crystal Video Sound.webp
+│  │  ├─ Crystal Video Uploading TVCs & film.webp
+│  │  └─ Crystal Video Video Editing.webp
+│  ├─ main.js
+│  ├─ projectcategory.js
+│  ├─ services_data.js
+│  └─ style.css
+└─ tailwind.config.js
 ```
